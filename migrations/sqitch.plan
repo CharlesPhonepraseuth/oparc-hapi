@@ -1,0 +1,17 @@
+%syntax-version=1.0.0
+%project=oparc-hapi
+
+01_tables 2020-12-13T14:55:34Z CharlesP <charles.phonepraseuth@gmail.com> # ajout des tables
+02_types-notnull 2020-12-13T15:08:39Z CharlesP <charles.phonepraseuth@gmail.com> # ajout de contraintes, changements de type
+03_checks 2020-12-13T15:12:49Z CharlesP <charles.phonepraseuth@gmail.com> # ajout de checks
+04_ticket-number-generator 2020-12-13T15:20:01Z CharlesP <charles.phonepraseuth@gmail.com> # génération automatique du numéro de billet
+05_domaines 2020-12-13T15:24:02Z CharlesP <charles.phonepraseuth@gmail.com> # création de domaines pertinents
+06_3fn 2020-12-13T15:27:48Z CharlesP <charles.phonepraseuth@gmail.com> # troisième forme normale
+07_maintenance 2020-12-13T15:30:50Z CharlesP <charles.phonepraseuth@gmail.com> # fonctionnalités pour la maintenance
+08_views 2020-12-13T15:36:20Z CharlesP <charles.phonepraseuth@gmail.com> # ajout de quelques vues
+09_access_api 2020-12-13T15:56:06Z CharlesP <charles.phonepraseuth@gmail.com> # api pour l'accès des visiteurs
+10_events_api 2020-12-13T15:58:46Z CharlesP <charles.phonepraseuth@gmail.com> # api pour la fréquentation des attractions
+11_tickets_api 2020-12-13T16:02:59Z CharlesP <charles.phonepraseuth@gmail.com> # api pour la billetterie
+12_booking_api 2020-12-13T16:06:42Z CharlesP <charles.phonepraseuth@gmail.com> # api liée à l'application mobile
+13_stats_api 2020-12-13T16:12:13Z CharlesP <charles.phonepraseuth@gmail.com> # api pour voir les statistiques
+14_maintenance_api 2020-12-13T16:15:18Z CharlesP <charles.phonepraseuth@gmail.com> # api pour la maintenance

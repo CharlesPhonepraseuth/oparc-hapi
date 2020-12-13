@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title Achat de billets O'parc
+        meta(charset='utf8')
+        link(rel="stylesheet", href="/tickets/static/style.css")
+    body
+        h1 O'parc
+        h2 Un parc rempli d'attractions et de spectacles pour toute la famille et ouvert 24h/24
+        p Vos billets ont été générés, en voici la liste
+        ul
+            each num in tickets
+                li= num

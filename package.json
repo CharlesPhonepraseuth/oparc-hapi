@@ -1,0 +1,35 @@
+{
+  "name": "oparc-hapi",
+  "version": "1.0.0",
+  "description": "Il est en temps de mettre en pratique toutes ces petites choses acquises durant ces derniers jours.",
+  "main": "./app/server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesPhonepraseuth/oparc-hapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesPhonepraseuth/oparc-hapi/issues"
+  },
+  "homepage": "https://github.com/CharlesPhonepraseuth/oparc-hapi#readme",
+  "dependencies": {
+    "@hapi/catbox": "^11.1.0",
+    "@hapi/catbox-redis": "^5.0.5",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.0.0",
+    "@hapi/yar": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "pg": "^8.0.0",
+    "pug": "^2.0.4"
+  }
+}

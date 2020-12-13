@@ -1,0 +1,14 @@
+{
+    "rates": {
+        "base": 30,
+        "group": 24,
+        "youth": 20,
+        "jobless": 18,
+        "vip": 12
+    },
+    "vouchers": {
+        "dariusz": 0.9,
+        "mickey": 0.85,
+        "odkx17vti8": 0.75
+    }
+}

@@ -1,0 +1,15 @@
+// Enlever -example du nom du fichier
+// Ecrire les infos de la base de donnée à l'endroit indiqué
+
+[core]
+    engine = pg
+	# plan_file = sqitch.plan
+	# top_dir = .
+# [engine "pg"]
+	# target = db:pg:
+	# registry = sqitch
+	# client = psql
+[target "origin"]
+	uri = db:pg://[your-database-connection-string]
+[engine "pg"]
+	target = origin

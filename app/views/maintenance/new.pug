@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Maintenance O'parc
+        meta(charset='utf8')
+        link(rel="stylesheet", href="/maintenance/static/style.css")
+    body
+        h1 O'parc
+        h2 Application de gestion pour le service maintenance
+        h3 Ouverture d'un incident
+        form(method='POST' action='/maintenance/incident/new')
+            .form-element
+                label Nature
+                input(
+                    type='text'
+                    name='nature'
+                )
+            
+            .form-element
+                label Attraction concernée
+                select(
+                    name='event'
+                )
+                    each event in data.events
+                        option(
+                            value=event.id
+                        )= event.name
+            
+            .form-element.form-element-no-label
+                button(type="submit") Confirmer les modifications
+            
+            a(href='/') Retour à la liste des incidents
+        footer © O'parc 2020

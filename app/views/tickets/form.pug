@@ -1,0 +1,94 @@
+doctype html
+html
+    head
+        title Achat de billets O'parc
+        meta(charset='utf8')
+        link(rel="stylesheet", href="/tickets/static/style.css")
+    body
+        h1 O'parc
+        h2 Un parc rempli d'attractions et de spectacles pour toute la famille et ouvert 24h/24
+        h3 Formulaire de réservation de billet
+        form(method='POST' action='/tickets/processing')
+            .form-element
+                label Nom complet
+                input(
+                    required
+                    type='text'
+                    name='fullname'
+                )
+            p.info Les billets ne sont pas nominatifs, votre nom n'est utilisé que pour vous identifier pendant l'étape du paiement
+            .form-element
+                label Nombre de billets souhaité
+                input(
+                    required
+                    type='number'
+                    name='total_tickets'
+                    value='1'
+                    step='1'
+                    min='1'
+                    max='10'
+                )
+            p.info Pour un achat de groupe, merci de passer par le formulaire dédié
+            .form-element
+                label Nombre de visiteurs de moins de 25 ans
+                input(
+                    required
+                    type='number'
+                    name='youth_tickets'
+                    value='0'
+                    step='1'
+                    min='0'
+                    max='1'
+                )
+            .form-element
+                label Nombre de visiteurs sans emploi
+                input(
+                    required
+                    type='number'
+                    name='jobless_tickets'
+                    value='0'
+                    step='1'
+                    min='0'
+                    max='1'
+                )
+            .form-element
+                label Nombre de VIP
+                input(
+                    required
+                    type='number'
+                    name='vip_tickets'
+                    value='0'
+                    step='1'
+                    min='0'
+                    max='1'
+                )
+            .form-element
+                label Date de votre arrivée
+                input(
+                    required
+                    type='date'
+                    name='validity_start'
+                    value=now
+                    min=now
+                )
+            .form-element
+                label Date de votre départ
+                input(
+                    required
+                    type='date'
+                    name='validity_end'
+                    min=now
+                )
+            p.info La date à renseigner est en fait la date de votre dernière journée au parc
+            .form-element
+                label#voucher-check Code promo
+                input(
+                    type='text'
+                    name='voucher'
+                )
+            .form-element.form-element-no-label
+                output#total
+            .form-element.form-element-no-label
+                button(type="submit") Passer commande
+        footer © O'parc 2020
+        script(src='/tickets/static/app.js')

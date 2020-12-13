@@ -1,0 +1,79 @@
+doctype html
+html
+    head
+        title Maintenance O'parc
+        meta(charset='utf8')
+        link(rel="stylesheet", href="/maintenance/static/style.css")
+    body
+        h1 O'parc
+        h2 Application de gestion pour le service maintenance
+        h3 Modification de l'incident #[em= incident.nature] sur #[em= incident.event]
+        form(method='POST')
+            .form-element
+                label Nature
+                input(
+                    disabled
+                    type='text'
+                    value=incident.nature
+                )
+            p.info Seuls les encarts cochés seront pris en compte
+            fieldset
+                legend
+                    input(
+                        type='checkbox'
+                        name='update_progress'
+                    )
+                    | Modifier l'avancement
+                .form-element
+                    label Avancement
+                    select(
+                        name='progress'
+                    )
+                        each label in data.progress_steps
+                            if label === incident.progress
+                                option(
+                                    selected
+                                    value=label
+                                )= label
+                            else
+                                option(
+                                    value=label
+                                )= label
+            fieldset
+                legend
+                    input(
+                        type='checkbox'
+                        name='assign_technician'
+                    )
+                    | Affecter un technicien
+                .form-element
+                    label Technicien
+                    input(
+                        type='text'
+                        name='technician'
+                        value=incident.technician
+                    )
+            fieldset
+                legend
+                    if incident.resolved
+                        input(
+                            type='checkbox'
+                            name='reopen'
+                        )
+                        | Rouvrir l'incident
+                    else
+                        input(
+                            type='checkbox'
+                            name='close'
+                        )
+                        | Fermer l'incident
+                if incident.resolved
+                    p.info Attention, cette action fermera automatiquement l'attraction au public et annulera les réservations en cours
+                else
+                    p.info Attention, cette action réouvrira automatiquement l'attraction si aucun autre incident n'est déclaré en cours sur celle-ci
+            
+            .form-element.form-element-no-label
+                button(type="submit") Confirmer les modifications
+            
+            a(href='/') Retour à la liste des incidents
+        footer © O'parc 2020

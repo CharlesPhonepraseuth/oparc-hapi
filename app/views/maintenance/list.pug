@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title Maintenance O'parc
+        meta(charset='utf8')
+        link(rel="stylesheet", href="/maintenance/static/style.css")
+    body
+        h1 O'parc
+        h2 Application de gestion pour le service maintenance
+        h3 Liste des incidents
+        a(href='/maintenance/incident/new') Déclarer un nouvel incident
+        table
+            tr 
+                th Attraction
+                th Nature
+                th État
+                th Date de déclaration
+            each incident in incidents
+                tr
+                    td= incident.event
+                    td
+                        a(href='/maintenance/incident/' + incident.id)
+                            = incident.nature
+                    td= incident.progress
+                    td= incident.happening_time
+                    td
+                        

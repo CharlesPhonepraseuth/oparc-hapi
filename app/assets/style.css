@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300i,400|Sen:700,800&display=swap');
+
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: cornflowerblue;
+    width: 80vw;
+    min-width: 450px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, footer {
+    font-family: Sen, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 3px solid white;
+    padding-bottom: .2em;
+}
+
+h2 {
+    line-height: 1.1em;
+    font-size: 1.2em;
+}
+
+h3 {
+    margin: .7em auto;
+    padding: .4em;
+    width: 50%;
+    border: 2px solid #333;
+    border-width: 2px 0;
+}
+
+form {
+    padding: 2em .5em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: .6em 0;
+}
+
+.form-element.form-element-no-label {
+    justify-content: center;
+}
+
+.form-element label {
+    font-size: .9em;
+    line-height: 2em;
+}
+
+.form-element input {
+    width: 40%;
+}
+
+.form-element button {
+    font-size: 1.4em;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: .4em .9em;
+}
+
+.info {
+    font-style: italic;
+    font-weight: 300;
+    font-size: .8em;
+    margin: .6em 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#voucher-check.good {
+    color: green;
+}
+
+#voucher-check.bad {
+    color: red;
+}
